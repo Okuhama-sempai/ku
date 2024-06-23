@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Me da o UC?</title>
+<style>
+body {
+background-color: red;
+color: white;
+font-family: Arial, sans-serif;
+text-align: center;
+padding-top: 100px;
+overflow: hidden;
+height: 100vh;
+position: relative;
+margin: 0;
+}
+.button {
+cursor: pointer;
+display: inline-block;
+padding: 10px 20px;
+margin: 10px;
+border: none;
+border-radius: 5px;
+background-color: rgba(255, 255, 255, 0.3);
+color: white;
+font-size: 18px;
+text-transform: uppercase;
+transition: background-color 0.3s;
+}
+.button:hover {
+background-color: rgba(255, 255, 255, 0.5);
+}
+#nao {
+cursor: pointer;
+display: inline-block;
+padding: 10px 20px;
+margin: 10px;
+border: none;
+border-radius: 5px;
+background-color: rgba(255, 255, 255, 0.3);
+color: white;
+font-size: 18px;
+text-transform: uppercase;
+position: absolute;
+transition: transform 0.5s;
+}
+</style>
+</head>
+<body>
+<h1>me da o CÚ ????</h1>
+<button class="button" onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';">SIM</button>
+<button id="nao">NÃO</button>
+<script>
+const naoButton = document.getElementById('nao');
+naoButton.addEventListener('mouseover', () => {
+const bodyWidth = document.body.clientWidth;
+const bodyHeight = document.body.clientHeight;
+const buttonWidth = naoButton.clientWidth;
+const buttonHeight = naoButton.clientHeight;
+const newLeft = Math.random() * (bodyWidth - buttonWidth);
+const newTop = Math.random() * (bodyHeight - buttonHeight);
+naoButton.style.left = newLeft + 'px';
+naoButton.style.top = newTop + 'px';
+});
+</script>
+</body>
+</html>
